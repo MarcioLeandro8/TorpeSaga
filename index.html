@@ -1,150 +1,167 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>TORPESAGA</title>
-    <style>
-        /* Estilos CSS para formatar a página */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: green;
-        }
-        
-        h1 {
-            text-align: center;
-            color: white;
-            font-size: 50px;
-        }
-
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-            font-size: 36px;
-        }
-        
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #333;
-            color: white;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        tr:hover {
-            background-color: #ddd;
-        }
-
-        .tournament-image {
-            display: block;
-            margin: 0 auto;
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-    <img class="tournament-image" src="/logo.png" alt="Torpesaga">
-    <h1>CLASSIFICAÇÃO GERAL</h1>
+<html lang="br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <title>TORPESAGA</title>
+    </head>
+    <body>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="image1.jpg" class="carousel-image" alt="Image 1">
+                <img src="image2.jpg" class="carousel-image" alt="Image 2">
+                <img src="image3.jpg" class="carousel-image" alt="Image 3">
+                <img src="image4.jpg" class="carousel-image" alt="Image 4">
+                <img src="image5.jpg" class="carousel-image" alt="Image 5">
+            </div>
+        </div>
     
-    <table>
-        <tr>
-            <th>Posição</th>
-            <th>Equipe</th>
-            <th>Peixe 1</th>
-            <th>Peixe 2</th>
-            <th>Peixe 3</th>
-            <th>Peixe 4</th>
-            <th>Peixe 5</th>
-            <th>Pontuação Total</th>
-        </tr>
-        <tr>
-            <td id="position1"></td>
-            <td id="team1"></td>
-            <td id="score1-1"></td>
-            <td id="score1-2"></td>
-            <td id="score1-3"></td>
-            <td id="score1-4"></td>
-            <td id="score1-5"></td>
-            <td id="totalScore1"></td>
-        </tr>
-        <tr>
-            <td id="position2"></td>
-            <td id="team2"></td>
-            <td id="score2-1"></td>
-            <td id="score2-2"></td>
-            <td id="score2-3"></td>
-            <td id="score2-4"></td>
-            <td id="score2-5"></td>
-            <td id="totalScore2"></td>
-        </tr>
-        <tr>
-            <td id="position3"></td>
-            <td id="team3"></td>
-            <td id="score3-1"></td>
-            <td id="score3-2"></td>
-            <td id="score3-3"></td>
-            <td id="score3-4"></td>
-            <td id="score3-5"></td>
-            <td id="totalScore3"></td>
-        </tr>
-        <tr>
-            <td id="position4"></td>
-            <td id="team4"></td>
-            <td id="score4-1"></td>
-            <td id="score4-2"></td>
-            <td id="score4-3"></td>
-            <td id="score4-4"></td>
-            <td id="score4-5"></td>
-            <td id="totalScore4"></td>
-        </tr>
-        <tr>
-            <td id="position5"></td>
-            <td id="team5"></td>
-            <td id="score5-1"></td>
-            <td id="score5-2"></td>
-            <td id="score5-3"></td>
-            <td id="score5-4"></td>
-            <td id="score5-5"></td>
-            <td id="totalScore5"></td>
-        </tr>
-    </table>
+        <div class="container">
+            <img class="tournament-image" src="/Torpesaga.png" alt="Torpesaga">
+            <h1>CLASSIFICAÇÃO GERAL</h1>
+            
+            <!-- Nova tabela para Maior Peixe -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="center">MAIOR PEIXE</th>
+                        </tr>
+                        <tr>
+                            <th>Nome da Equipe</th>
+                            <th>Tamanho do Peixe (cm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="largestFishTeam"></td>
+                            <td id="largestFishSize"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
     
-    <script>
-        // Código JavaScript para preencher os dados da tabela
+            <!-- Tabela existente -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Equipe</th>
+                            <th>Peixe 1</th>
+                            <th>Peixe 2</th>
+                            <th>Peixe 3</th>
+                            <th>Peixe 4</th>
+                            <th>Peixe 5</th>
+                            <th>Pontuação Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="position1"></td>
+                            <td id="team1"></td>
+                            <td id="score1-1"></td>
+                            <td id="score1-2"></td>
+                            <td id="score1-3"></td>
+                            <td id="score1-4"></td>
+                            <td id="score1-5"></td>
+                            <td id="totalScore1"></td>
+                        </tr>
+                        <tr>
+                            <td id="position2"></td>
+                            <td id="team2"></td>
+                            <td id="score2-1"></td>
+                            <td id="score2-2"></td>
+                            <td id="score2-3"></td>
+                            <td id="score2-4"></td>
+                            <td id="score2-5"></td>
+                            <td id="totalScore2"></td>
+                        </tr>
+                        <tr>
+                            <td id="position3"></td>
+                            <td id="team3"></td>
+                            <td id="score3-1"></td>
+                            <td id="score3-2"></td>
+                            <td id="score3-3"></td>
+                            <td id="score3-4"></td>
+                            <td id="score3-5"></td>
+                            <td id="totalScore3"></td>
+                        </tr>
+                        <tr>
+                            <td id="position4"></td>
+                            <td id="team4"></td>
+                            <td id="score4-1"></td>
+                            <td id="score4-2"></td>
+                            <td id="score4-3"></td>
+                            <td id="score4-4"></td>
+                            <td id="score4-5"></td>
+                            <td id="totalScore4"></td>
+                        </tr>
+                        <tr>
+                            <td id="position5"></td>
+                            <td id="team5"></td>
+                            <td id="score5-1"></td>
+                            <td id="score5-2"></td>
+                            <td id="score5-3"></td>
+                            <td id="score5-4"></td>
+                            <td id="score5-5"></td>
+                            <td id="totalScore5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         
-        // Dados das equipes
-        var teams = [
-            { name: "CACHORRÃO DE FAZENDA 02", scores: [43.5,42,39.5,40,40] },
-            { name: "WISK PEGA", scores: [50.5,44.5,41,35,35.5] },
-            { name: "E-FISHING", scores: [44.5,42,42,39.5,41] },
-            { name: "MECANICA NAUTICA", scores: [41.5,40.5,40,49,43.5] },
-            { name: "POSTO CARAJÁS ", scores: [41.5,51.5,41, 44.5,41.5] }
-        ];
-        
-        // Ordena as equipes por pontuação total (da maior para a menor)
-        teams.sort((a, b) => b.scores.reduce((acc, cur) => acc + cur, 0) - a.scores.reduce((acc, cur) => acc + cur, 0));
-        
-        // Preenche os nomes das equipes, pontuações individuais e pontuações totais
-        for (var i = 0; i < 5; i++) {
-            document.getElementById("position" + (i+1)).textContent = (i+1) + "º";
-            document.getElementById("team" + (i+1)).textContent = teams[i].name;
-            for (var j = 0; j < 5; j++) {
-                var scoreId = "score" + (i+1) + "-" + (j+1);
-                document.getElementById(scoreId).textContent = teams[i].scores[j];
+        <script>
+            // Código JavaScript para preencher os dados da tabela
+            
+            // Dados das equipes
+            var teams = [
+                { name: "CACHORRÃO DE FAZENDA 02", scores: [43.5, 42, 39.5, 40, 40] },
+                { name: "WISK PEGA", scores: [50.5, 44.5, 41, 35, 35.5] },
+                { name: "E-FISHING", scores: [44.5, 42, 42, 39.5, 41] },
+                { name: "MECANICA NAUTICA", scores: [41.5, 40.5, 40, 49, 43.5] },
+                { name: "POSTO CARAJÁS", scores: [41.5, 51.5, 41, 44.5, 41.5] }
+            ];
+    
+            // Informações do maior peixe
+            var largestFish = {
+                team: "WISK PEGA",
+                size: 51.5
+            };
+    
+            // Preenche as informações do maior peixe
+            document.getElementById("largestFishTeam").textContent = largestFish.team;
+            document.getElementById("largestFishSize").textContent = largestFish.size;
+    
+            // Ordena as equipes por pontuação total (da maior para a menor)
+            teams.sort((a, b) => b.scores.reduce((acc, cur) => acc + cur, 0) - a.scores.reduce((acc, cur) => acc + cur, 0));
+    
+            // Preenche os nomes das equipes, pontuações individuais e pontuações totais
+            for (var i = 0; i < 5; i++) {
+                document.getElementById("position" + (i + 1)).textContent = (i + 1) + "º";
+                document.getElementById("team" + (i + 1)).textContent = teams[i].name;
+                for (var j = 0; j < 5; j++) {
+                    var scoreId = "score" + (i + 1) + "-" + (j + 1);
+                    document.getElementById(scoreId).textContent = teams[i].scores[j];
+                }
+                var totalScoreId = "totalScore" + (i + 1);
+                document.getElementById(totalScoreId).textContent = teams[i].scores.reduce((acc, cur) => acc + cur, 0);
             }
-            var totalScoreId = "totalScore" + (i+1);
-            document.getElementById(totalScoreId).textContent = teams[i].scores.reduce((acc, cur) => acc + cur, 0);
-        }
-    </script>
-</body>
+    
+            // Código JavaScript para controlar o carrossel de imagens
+            var currentImageIndex = 0;
+            var images = document.querySelectorAll('.carousel-image');
+    
+            function showNextImage() {
+                images[currentImageIndex].style.opacity = 0;
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                images[currentImageIndex].style.opacity = 1;
+            }
+    
+            setInterval(showNextImage, 3000);
+        </script>
+    </body>
 </html>
+
